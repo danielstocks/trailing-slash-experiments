@@ -1,11 +1,14 @@
-# trailing slash experiments
+# Trailing slash experiments
 
-This repo demonstrates the inconsistencies between `now dev` and `serve` when
-using the `trailingSlash` configuration option set to `true`
+This repo demonstrates the inconsistencies between [now dev](https://github.com/zeit/now),
+[serve](https://github.com/zeit/serve-handle) and
+[superstatic](https://github.com/firebase/superstatic)
+when using the `trailingSlash` configuration option set to `true`
 
 ## TLDR:
-1) Now redirects with a `308` status, serve redirects with a `301` status.
-2) Now will redirect files (eg /style.css) to trailing slash. Serve does not.
+1) now redirects with a `308` status, serve and superstatic redirects with a `301` status.
+2) now will redirect files (eg /style.css) to trailing slash. Serve and
+superstatic do not.
 
 
 
@@ -46,9 +49,9 @@ Request method:GET
 Status code: 200
 ```
 
-## serve
+## serve & superstatic
 
-Running `serve` command
+Running `serve` or `superstatic` command
 
 ### CSS FILE
 
